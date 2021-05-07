@@ -41,9 +41,9 @@ public class GridManager : MonoBehaviour
         }
 
         // Make Red and Blue starting tiles - Player Avatar
-        GridBoard[0, 6].GetComponent<SpriteRenderer>().sprite = RedRef;
+        GridBoard[0, 6].GetComponent<SpriteRenderer>().sprite = BlueRef;
 
-        GridBoard[18, 6].GetComponent<SpriteRenderer>().sprite = BlueRef;
+        GridBoard[18, 6].GetComponent<SpriteRenderer>().sprite = RedRef;
     }
 
     void CheckDimension()

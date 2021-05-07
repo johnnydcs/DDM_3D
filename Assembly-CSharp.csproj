@@ -62,6 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\Grid.cs" />
     <Compile Include="Assets\GridManager.cs" />
+    <Compile Include="Assets\RayTile.cs" />
+    <Compile Include="Assets\RayTileManager.cs" />
+    <Compile Include="Assets\TargetTile.cs" />
     <Compile Include="Assets\Tile.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Johnny/Desktop/Git/DDM_3D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

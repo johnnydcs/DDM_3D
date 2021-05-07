@@ -9,12 +9,14 @@ public class Tile : MonoBehaviour
     public Sprite BlackRef;
 
     public SpriteRenderer spriteRenderer;
-    
+    public Rigidbody rb;
+
     // Awake is called before Start
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = BlackRef;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
