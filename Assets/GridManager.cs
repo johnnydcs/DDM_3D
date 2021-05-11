@@ -24,7 +24,7 @@ public class GridManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        CheckDimension();
     }
 
     void GenerateGrid()
@@ -48,6 +48,22 @@ public class GridManager : MonoBehaviour
 
     void CheckDimension()
     {
+        var rtm = GetComponent<RayTileManager>().CheckValidDimension();
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log(this.name + "- Legal Summon?: " + rtm);
+            // Destroy RayTiles and flip black tiles to red or blue
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < Cols; j++)
+                {
+                    if (GridBoard[i, j].GetComponent<Tile>().IsMarked())
+                    {
+                        GridBoard[i, j].GetComponent<SpriteRenderer>().sprite = BlueRef;
+                    }
+                }
+            }
+        }
     }
 }

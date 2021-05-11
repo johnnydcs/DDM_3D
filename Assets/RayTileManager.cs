@@ -23,7 +23,7 @@ public class RayTileManager : MonoBehaviour
         CheckValidDimension();
     }
 
-    bool CheckValidDimension()
+    public bool CheckValidDimension()
     {
         // Check if each Raycasting tile hits a black tile
         for (int i = 0; i < RayTileChildren.Length; i++)
@@ -57,11 +57,8 @@ public class RayTileManager : MonoBehaviour
         return false;
     }
 
-    private void Update()
+    public void DestroySelf()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log(this.name + "- Legal Summon?: " + CheckValidDimension());
-        }
+        Destroy(this.transform);
     }
 }

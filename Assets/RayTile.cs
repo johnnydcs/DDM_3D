@@ -47,6 +47,8 @@ public class RayTile : MonoBehaviour
         {
             if (hit.collider.tag == "BlackTile")
             {
+                // Mark the black tile
+                hit.collider.GetComponent<Tile>().Marked();
                 HittingBlackTile = true;
             }
 
